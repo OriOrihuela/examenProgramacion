@@ -4,8 +4,9 @@ import org.lasencinas.address.Address;
 
 
 import java.security.PublicKey;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TokenContract {
 
@@ -15,7 +16,7 @@ public class TokenContract {
     private double totalSupply = 0;
     private PublicKey ownerPK = null;
 
-    private List<Address> balances = new ArrayList<>();
+    private Map<Address, Double> balances = new HashMap<>();
 
 
 
@@ -48,7 +49,7 @@ public class TokenContract {
         this.symbol = symbol;
     }
 
-    public double getTotalSupply() {
+    public double totalSupply() {
         return totalSupply;
     }
 
@@ -56,16 +57,12 @@ public class TokenContract {
         this.totalSupply = totalSupply;
     }
 
-    public List<Address> getBalances() {
+    public Map<Address, Double> getBalances() {
         return balances;
     }
 
-    public void setBalances(List<Address> balances) {
+    public void setBalances(Map<Address, Double> balances) {
         this.balances = balances;
-    }
-
-    public void setOwnerPK(PublicKey ownerPK) {
-        this.ownerPK = ownerPK;
     }
 
     /* ----- Métodos principales ---- */
@@ -73,8 +70,12 @@ public class TokenContract {
     public String toString() {
         return "\n" + "name = " + getName() + "\n" +
                 "symbol = " + getSymbol() + "\n" +
-                "totalSupply " + getTotalSupply() + "\n" +
+                "totalSupply " + totalSupply() + "\n" +
                 "owner PK " + getOwnerPK().hashCode();
     }
 
+    public void addOwner(PublicKey PK, Double units) {
+        this.ownerPK = PK;
+        this.totalSupply += units;
+    }
 }
