@@ -37,4 +37,13 @@ public class TokenContractTest {
         TokenContract tokenContract = new TokenContract(address2);
         assertEquals("Mama", tokenContract.getSymbol());
     }
+
+    @Test
+    public void payable_test() {
+
+        Address rick = new Address();
+        rick.generateKeyPair();
+        TokenContract ricknillos = new TokenContract(rick);
+        ricknillos.addOwner(rick.getPK(), 100d);
+    }
 }
