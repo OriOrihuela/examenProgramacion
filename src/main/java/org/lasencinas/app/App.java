@@ -1,5 +1,9 @@
 package org.lasencinas.app;
 
+import org.lasencinas.address.Address;
+import org.lasencinas.gensig.GenSig;
+import org.lasencinas.tokenContract.TokenContract;
+
 /**
  * Contratos inteligentes con enZinium.
  *
