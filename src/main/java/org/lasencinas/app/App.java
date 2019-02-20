@@ -22,8 +22,7 @@ import org.lasencinas.tokenContract.TokenContract;
 
 public class App {
 
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
         /**
          * Crea una Address en nuestro sistema para Rick
          * Genera las claves privada y publica de la direccion
@@ -33,5 +32,16 @@ public class App {
 
         Address rick = new Address();
         rick.generateKeyPair();
+
+        /**
+         * Visualiza la direccion publica de Rick y su balance
+         *
+         * Utiliza el metodo hashCode() de PublicKey para
+         * mostrar la PublicKey en consola
+         */
+
+        System.out.println("\n" + "Address de Rick" + "\n" +
+                "==============="        );
+        System.out.println(rick.toString());
     }
 }
