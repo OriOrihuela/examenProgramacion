@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.lasencinas.address.Address;
+import org.lasencinas.tokenContract.TokenContract;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,23 +28,13 @@ public class TokenContractTest {
     public void gettersAndSettersTest() {
 
         /**
-         * Comprobaremos también que las entidades de tipo Address se insertan bien y
-         * no nos salta nigún error ^^
+         * Elimino los balances del commit anterior ya que no forman parte del constructor, error mío ^^'.
          */
-
-        Address address1 = new Address();
-        address1.setBalance(100);
-        balances.add(address1);
 
         Address address2 = new Address();
         address2.setSymbol("Mama");
-        balances.add(address2);
 
-        assertEquals(100, address1.getBalance(), 0.01);
-        assertEquals("Mama", address2.getSymbol());
-
-
-
-
+        TokenContract tokenContract = new TokenContract(address2);
+        assertEquals("Mama", tokenContract.getSymbol());
     }
 }
