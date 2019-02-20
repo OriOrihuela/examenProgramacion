@@ -45,5 +45,8 @@ public class TokenContractTest {
         rick.generateKeyPair();
         TokenContract ricknillos = new TokenContract(rick);
         ricknillos.addOwner(rick.getPK(), 100d);
+        assertEquals(100, ricknillos.totalSupply(), 0.01);
+        Address morty = new Address();
+        morty.generateKeyPair();
     }
 }
