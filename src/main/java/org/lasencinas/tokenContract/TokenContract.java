@@ -21,7 +21,6 @@ public class TokenContract {
 
     /* ---- Constructor ---- */
     public TokenContract(Address address) {
-        this.balances.add(address);
         this.ownerPK = address.getPK();
         this.symbol = address.getSymbol();
         this.totalSupply = address.getBalance();
