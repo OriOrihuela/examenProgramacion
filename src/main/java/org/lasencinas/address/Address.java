@@ -55,4 +55,10 @@ public class Address {
     public void generateKeyPair() {
         setPK(GenSig.generateKeyPair().getPublic());
     }
+
+    @Override
+    public String toString() {
+        return "\n" + "PK = " + getPK().hashCode() + "\n" +
+                "Balance = " + getBalance();
+    }
 }
