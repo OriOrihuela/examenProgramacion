@@ -148,5 +148,9 @@ public class App {
                 + ricknillos.balanceOf(morty.getPK())
                 + " "
                 + ricknillos.symbol());
+
+        /**
+         * Hasta aquí he llegado.
+         */
     }
 }
