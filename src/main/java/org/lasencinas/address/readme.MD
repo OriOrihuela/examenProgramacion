@@ -1,26 +1,23 @@
-Es la direccion que cada usuario tiene en nuestro sistema.
+***Es la direccion que cada usuario tiene en nuestro sistema.***
 
-ATRIBUTOS
+### ATRIBUTOS:
 
-PublicKey PK es la clave pública de la direccion desde la que se envían o reciben
-enziniums.
+- ```PublicKey PK``` es la **clave pÃºblica** de la **direccion** desde la que se envÃ­an o reciben enziniums.
 
-PrivateKey SK es la clave privada de la direccion desde la que se envían o reciben
-enziniums.
+- ```PrivateKey SK``` es la **clave privada** de la **direccion** desde la que se envÃ­an o reciben enziniums.
 
-balance es la cantidad de enzniums que posee esta dirección.
+- ```balance``` es la cantidad de enzniums que posee esta direcciÃ³n.
 
-symbol es el símbolo del enZinium EZI
+- ```symbol``` es el sÃ­mbolo del enZinium EZI.
 
-MÉTODOS
+### MÃ‰TODOS:
 
-Si programas las historias de usuario indicadas en App.java construirás los getters y setters necesarios.
+*Si programas las historias de usuario indicadas en App.java construirÃ¡s los getters y setters necesarios.*
 
-toString() devuelve la representación en String de un objeto de la clase
-Address.
+- ```toString()``` devuelve la representaciÃ³n en ```String``` de un objeto de la clase ```Address```.
 
-addEZI(Double EZI) añade EZI al balance de esta direccion.
+- ```addEZI(Double EZI)``` aÃ±ade EZI al balance de esta direccion.
 
-transferEZI(Double EZI) transfiere la cantidad de EZI a esta dirección.
+- ```transferEZI(Double EZI)``` transfiere la cantidad de EZI a esta direcciÃ³n.
 
-send(TokenContract contract, Double EZI) envia EZI desde esta direccion a un contrato inteligente.
+- ```send(TokenContract contract, Double EZI)``` envia EZI desde esta direccion a un contrato inteligente.
