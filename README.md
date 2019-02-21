@@ -1,4 +1,4 @@
-# EZINIUM
+# ENZINIUM
 
 #### Contratos inteligentes con enZinium.
 
