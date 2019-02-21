@@ -1,31 +1,22 @@
-Clase TokenContract
+# Clase TokenContract
 
-Esta clase representa un contrato inteligente en nuestra plataforma.
-Lleva un control del numero de tokens que existen de un producto, por ejemplo una entrada de concierto, y a quiÈn pertenecen.
+Esta clase representa un contrato inteligente en nuestra plataforma. Lleva un control del n√∫mero de tokens que existen de un producto, por ejemplo una entrada de concierto, y a qui√©n pertenecen.
 Todo contrato tiene un propietario.
 
-ATRIBUTOS
-Todos los que exijan los mÈtodos de la clase.
+### ATRIBUTOS
+- *Todos los que exijan los m√©todos de la clase.*
 
-balances contiene una tabla que hace el seguimiento de cu·ntos tokens pertenecen a cada propietario.
+- ```balances``` contiene una tabla que hace el seguimiento de cu√°ntos tokens pertenecen a cada propietario.
 
-M…TODOS
-ï name devuelve el nombre del token de forma human-readable (p.e., ìUS Dollarsî).
-symbol() devuelve el nombre del sÌmbolo del token de forma human-readable (p.e.,
-ìUSDî).
-ï totalSupply() devuelve el total de unidades de este token que actualmente existen
-ï addOwner(PublicKey PK, Double units) aÒade un propietario a balances.
-ï numOwners() devuelve el numero de propietarios en balances
-ï balanceOf(PublicKey owner) devuelve el numero de tokens de un propietario.
-transfer(PublicKey recipient, Double units) transfiere tokens del propietario
-del contrato a la direcciÛn de destino.
-
-transfer(PublicKey sender, PublicKey recipient, Double units) transfiere
-tokens del sender al recipient.
-
-require(Boolean holds) throws Exception lanza una excepciÛn cuando holds es
-false .
-
-ï owners() mueestra en consola todos los propietarios.
-payable(PublicKey recipient, Double enziniums) envia los tokens a la direccion
-recipient y envia los enziniums al propietario del contrato.
+M√âTODOS
+- ```name``` devuelve el nombre del token de forma human-readable (p.e., ‚ÄúUS Dollars‚Äù).
+- ```symbol()``` devuelve el nombre del s√≠mbolo del token de forma human-readable (p.e., ‚ÄúUSD‚Äù).
+- ```totalSupply()``` devuelve el total de unidades de este token que actualmente existen.
+- ```addOwner(PublicKey PK, Double units)``` a√±ade un propietario a ```balances```.
+- ```numOwners()``` devuelve el numero de propietarios en ```balances```.
+- ```balanceOf(PublicKey owner)``` devuelve el numero de tokens de un propietario.
+- ```transfer(PublicKey recipient, Double units)``` transfiere tokens del propietario del contrato a la direcci√≥n de destino.
+- ```transfer(PublicKey sender, PublicKey recipient, Double units)``` transfiere tokens del sender al recipient.
+- ```require(Boolean holds) throws Exception``` lanza una excepci√≥n cuando holds es ```false```.
+- ```owners()``` muestra en consola todos los propietarios.
+- ```payable(PublicKey recipient, Double enziniums)``` env√≠a los tokens a la direcci√≥n recipient y env√≠a los enziniums al propietario del contrato.
