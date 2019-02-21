@@ -1,6 +1,5 @@
-Clase GenSig
+# Clase GenSig
 
-Esta clase contiene las utilidades para generar el par de clave pública y privada asociados a
-toda direccion Address de nuestra sistema.
+Esta clase contiene las utilidades para generar el par de clave pÃºblica y privada asociados a toda direccion *Address* de nuestra sistema.
 
-NO puedes modificar su código
+### NO puedes modificar su cÃ³digo
